@@ -1,0 +1,64 @@
+
+
+.loading-container {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 100px;
+    height: 175px;
+    position: relative;
+}
+
+.foot {
+    color: gray;
+    width: 55px;
+    height: 64px;
+}
+
+.loading-text {
+    color: gray;
+}
+
+#foot1{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    animation: 4S infinite fade;
+}
+
+#foot2{
+    position: absolute;
+    left: 0;
+    bottom: 55px;
+    transform: scaleX(-1);
+    animation: 4S infinite fade;
+    animation-delay: .5s;
+}
+
+#foot3{
+    
+    position: absolute;
+    right: 0;
+    top: 0;
+    animation: 4S infinite fade;
+    animation-delay: 1s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
