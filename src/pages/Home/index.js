@@ -1,18 +1,19 @@
 import React from 'react'
-import { useAuth } from '../../context/AuthContext';
+import Navigation, { NavItem } from "../../components/Navigation"
+import {ReactComponent as Invoices} from "../../assets/invoices.svg"
+import {ReactComponent as Inbox} from "../../assets/inbox.svg"
+import {ReactComponent as Statistics} from "../../assets/statistics.svg"
+import {ReactComponent as Profile} from "../../assets/profile.svg"
 
 function Home() {
-  const{currentUser, logOut} = useAuth()
-
-  const handleLogOut = async (e) => {
-    await logOut();
-  }
 
   return (
-    <>
-    <h1>Welcome {currentUser.email}</h1>
-    <button onClick={handleLogOut}>logOut</button>
-    </>
+    <Navigation>
+      <NavItem tag="Invoices" to="/home/invoices" icon={<Invoices/>}/>
+      <NavItem tag="Inbox" to="/home/inbox" icon={<Inbox/>}/>
+      <NavItem tag="Statistics" to="/home/statistics" icon={<Statistics/>}/>
+      <NavItem tag="Profile" to="/home/profile" icon={<Profile/>}/>
+    </Navigation>
   )
 }
 
