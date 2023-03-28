@@ -5,7 +5,7 @@ import LandingPage from "./pages/LandingPage"
 import { Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import { PrivateRoute } from "./components/PrivateRoute";
-import Invoices from "./pages/Invoices";
+import InvoicePage from "./pages/InvoicePage";
 import Inbox from "./pages/Inbox";
 import Statistics from "./pages/Statistics";
 import Profile from "./pages/Profile";
@@ -18,7 +18,7 @@ function App() {
       <Route path="/signin" element={<SignIn/>}/>
       <Route path="/signup" element={<SignUp/>}/>
       <Route path="/home" element={<PrivateRoute><Home/></PrivateRoute>}>
-        <Route path="invoices" element={<Invoices/>}/>
+        <Route path="invoices" element={<InvoicePage/>}/>
         <Route path="inbox" element={<Inbox/>}/>
         <Route path="statistics" element={<Statistics/>}/>
         <Route path="profile" element={<Profile/>}/>
