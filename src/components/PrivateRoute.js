@@ -4,11 +4,9 @@ import { useAuth } from '../context/AuthContext'
 import Loading from "./Loading/index"
 
 export const PrivateRoute = ({children}) => {
-  const {currentUser, loading} = useAuth();
-
+  const {currentUserToken, loading} = useAuth();
+  if(!currentUserToken) return <Navigate to="/signin"/>;
   if(loading) return <Loading text="loading user information"/>;
-  if(!currentUser) return <Navigate to="/signin"/>;
-
   return <>{children}</>;
 }
 

@@ -9,19 +9,26 @@ import InvoicePage from "./pages/InvoicePage";
 import Inbox from "./pages/Inbox";
 import Statistics from "./pages/Statistics";
 import Profile from "./pages/Profile";
+import CreateInvoice from "./pages/CreateInvoice";
+import InvoiceList from "./pages/InvoiceList";
 
 function App() {
   return(
     <AuthProvider>
     <Routes>
       <Route path="/" element={<LandingPage/>}/>
-      <Route path="/signin" element={<SignIn/>}/>
-      <Route path="/signup" element={<SignUp/>}/>
-      <Route path="/home" element={<PrivateRoute><Home/></PrivateRoute>}>
-        <Route path="invoices" element={<InvoicePage/>}/>
+      <Route path="signin" element={<SignIn/>}/>
+      <Route path="signup" element={<SignUp/>}/>
+      <Route path="home" element={<PrivateRoute><Home/></PrivateRoute>}>
+        
+        <Route path="invoices" element={<InvoicePage/>}>
+          <Route index="list" element={<InvoiceList/>}/>
+          <Route path="create" element={<CreateInvoice/>}/>
+        </Route>
         <Route path="inbox" element={<Inbox/>}/>
         <Route path="statistics" element={<Statistics/>}/>
         <Route path="profile" element={<Profile/>}/>
+
       </Route>
     </Routes>
     </AuthProvider>

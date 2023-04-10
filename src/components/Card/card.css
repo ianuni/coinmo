@@ -1,0 +1,17 @@
+.card-card {
+    max-width: 30rem;
+    min-width: 10rem;
+    
+    padding: 2rem;
+    margin: 0 auto;
+    
+    background: white;
+    border-radius: 20px;
+    
+}
+
+@media screen and (max-width: 600px) {
+    .card-card {
+      max-width: 100%;
+    }
+  }

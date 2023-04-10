@@ -1,21 +1,11 @@
 import React from 'react'
-import Invoices, {Invoice} from '../../components/Invoices';
-import SearchBar from '../../components/SearchBar';
+import { Outlet } from 'react-router-dom';
+
 
 const InvoicePage = () => {
 
   return (
-    <>
-    <SearchBar/>
-    <Invoices>
-      <Invoice />
-      <Invoice />
-      <Invoice />
-      <Invoice />
-      <Invoice />
-      <Invoice />
-    </Invoices>
-    </>
+    <Outlet/>
   );
 }
 

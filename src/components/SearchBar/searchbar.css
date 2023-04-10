@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     gap: .5rem;
-    position: relative;
+    
 }
 
 .searchbar-input{
@@ -66,6 +66,8 @@
 
 #search-menu-add-button {
     background: linear-gradient(112.69deg, #0C8CE9 -1.31%, #6310A4 100.69%);
+    font-size: 1.5rem;
+    color: white;
 }
 
 @media only screen and (max-width:450px){

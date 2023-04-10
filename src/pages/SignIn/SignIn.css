@@ -1,115 +1,24 @@
-* {
-    font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
-    padding: 0;
-    margin: 0;
-}
 
-.container {
+
+.sign-in-container {
     width: 100%;
-    height: 100vh;
+    padding: 3rem 0;
+    min-height: 100vh;
     background: linear-gradient(112.69deg, #0C8CE9 -1.31%, #6310A4 100.69%);
     background-position: center;
     background-size: cover;
-    position: relative;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.card-sign-up {
-    width: 100%;
-    max-width: 30rem;
-    min-width: 15rem;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 20px;
-    margin: 1rem;
-}
-
-.card-sign-in{
-    width: 100%;
-    max-width: 15rem;
-    min-width: 12rem;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 20px;
-    margin: 1rem;
-
-}
-
-#title-text {
-    margin: 0;
-    margin-bottom: .25rem;
-    font-size: 1.5rem;
-}
-
-.title-underscore {
-    margin-bottom: 1rem;
-    height: 5px;
-    width: 3rem;
-    border-radius: 10px;
-    background: linear-gradient(112.69deg, #0C8CE9 -1.31%, #6310A4 100.69%);
-}
-
-.separator {
-    margin: 1rem;
+    position: relative;
     
 }
 
-.input-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, auto));
-    grid-gap: .9rem;  
-}
 
-
-
-.input-group {
-    padding-bottom: .9rem;
-    position: relative;
-}
-.input-group label {
-    display: inline-block;
-    margin-bottom: .25rem;
-}
-
-.input-group input {
-    width: 99%;
-    height: 1.5rem;
-    display: block;
-    font-family: inherit;
-    font-size: 14px;
-    border: 1px solid #D6D6D6;
-    border-radius: 4px;
-}
-
-.input-group small{
-    font-size: 12px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    color: #dc3545;
-}
-
-.card-button {
-    margin-top: 1rem;
-    width: 100%;
-    height: 2.5rem;
-    background: linear-gradient(112.69deg, #0C8CE9 -1.31%, #6310A4 100.69%);
-    border: none;
-    border-radius: 10px;
-    color: white;
-    cursor:pointer;
-}
-
-.toggle {
+.sign-in-toggle {
     margin-top: .25rem;
     text-align: center;
 }
 
-.toggle-link{
+.sign-in-toggle-link{
     color:#0C8CE9;
     text-decoration: 0;
     cursor: pointer;

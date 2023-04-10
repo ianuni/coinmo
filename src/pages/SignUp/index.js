@@ -12,7 +12,8 @@ import Form, {
     TextInput, 
     SelectInput 
 } from '../../components/Form';
-
+import { auth } from '../../firebase';
+import Card from '../../components/Card';
 
 const initialForm = {
     name: "",
@@ -87,7 +88,6 @@ const validateForm = (form) => {
     if(form.country.trim().length === 0){
         errors.address = "Missing address field";
     }
-    console.log("a")
     return errors;
 };
 
@@ -106,14 +106,14 @@ const SignUp = () => {
     const {signUp} = useAuth()
     const navigate = useNavigate();
     async function actionSubmit(form){
-        await signUp(form.email, form.password);
-
-        navigate("/home");
+        await signUp(form);
+        console.log(auth.currentUser);
+        navigate("/home/profile");
     }
     return (
     
-    <div className="container">
-        <div className="card-sign-up" >
+    <div className="sign-up-container">
+        <Card>
             <Form onSubmit={handleSubmit} title="Sign Up">
                 <InputGrid>
                     <TextInput label="Name" name="name" placeholder="Name" onBlur={handleBlur} onChange={handleChange} error={errors.name}/>
@@ -138,11 +138,11 @@ const SignUp = () => {
                 <SubmitButton text="Sign Up"/>
             </Form>
             
-            <div className="toggle">
+            <div className="sign-up-toggle">
                 <span>Already have an account?</span>
-                <Link className="toggle-link" to="/signin"> Sign In</Link>
+                <Link className="sign-up-toggle-link" to="/signin"> Sign In</Link>
             </div>
-        </div>
+        </Card>
     </div>
   );
 }

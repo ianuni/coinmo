@@ -12,7 +12,7 @@ const Navigation = ({children}) => {
     <div className="home-container">
       <div className="navigation-container">
         <nav className="navigation">
-          <ul class="navigation-list">
+          <ul className="navigation-list">
             {children}
           </ul>
         </nav>
@@ -29,7 +29,7 @@ const Navigation = ({children}) => {
 
 export const NavItem = ({icon, to, tag}) => {
   return (
-    <li class="navigation-item">
+    <li className="navigation-item">
       <Link to={to}>
         {icon}
       </Link>

@@ -1,19 +1,11 @@
-* {
-    font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
-    padding: 0;
-    margin: 0;
-}
 
-
-
-.title-text {
+.form-title-text {
     margin: 0;
     margin-bottom: .25rem;
     font-size: 1.5rem;
 }
 
-.title-underscore {
+.form-title-underscore {
     margin-bottom: 1rem;
     height: 5px;
     width: 3rem;
@@ -21,28 +13,28 @@
     background: linear-gradient(112.69deg, #0C8CE9 -1.31%, #6310A4 100.69%);
 }
 
-.separator {
+.form-separator {
     margin: 1rem;
     border: 1px solid lightgray;
     border-radius: 1px;
 }
 
-.input-grid {
+.form-input-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, auto));
     grid-gap: .9rem;  
 }
 
-.input {
+.form-input {
     padding-bottom: .9rem;
     position: relative;
 }
-.input label {
+.form-input label {
     display: inline-block;
     margin-bottom: .25rem;
 }
 
-.input input {
+.form-input input {
     width: 99%;
     height: 1.5rem;
     display: block;
@@ -51,7 +43,7 @@
     border: 1px solid #D6D6D6;
     border-radius: 4px;
 }
-.input select {
+.form-input select {
     width: 99%;
     height: 1.5rem;
     display: block;
@@ -61,7 +53,7 @@
     border-radius: 4px;
 }
 
-.input small{
+.form-input small{
     font-size: 12px;
     position: absolute;
     bottom: 0;
@@ -69,7 +61,7 @@
     color: #dc3545;
 }
 
-.submit-button {
+.form-submit-button {
     margin-top: 1rem;
     width: 100%;
     height: 2.5rem;
