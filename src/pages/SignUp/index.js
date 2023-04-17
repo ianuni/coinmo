@@ -13,7 +13,7 @@ import Form, {
     SelectInput 
 } from '../../components/Form';
 import { auth } from '../../firebase';
-import Card from '../../components/Card';
+import Card, { CardContainer } from '../../components/Card';
 
 const initialForm = {
     name: "",
@@ -111,10 +111,10 @@ const SignUp = () => {
         navigate("/home/profile");
     }
     return (
+    <CardContainer background="var(--color-fade)">
     
-    <div className="sign-up-container">
-        <Card>
-            <Form onSubmit={handleSubmit} title="Sign Up">
+        <Card width="40" height="45" underscore={true} title="Sign Up">
+            <Form onSubmit={handleSubmit}>
                 <InputGrid>
                     <TextInput label="Name" name="name" placeholder="Name" onBlur={handleBlur} onChange={handleChange} error={errors.name}/>
                     <TextInput label="Nif" name="nif" placeholder="Nif" onBlur={handleBlur} onChange={handleChange} error={errors.nif}/>
@@ -142,8 +142,8 @@ const SignUp = () => {
                 <span>Already have an account?</span>
                 <Link className="sign-up-toggle-link" to="/signin"> Sign In</Link>
             </div>
-        </Card>
-    </div>
+    </Card>
+    </CardContainer>
   );
 }
 

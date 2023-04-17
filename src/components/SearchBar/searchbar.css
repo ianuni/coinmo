@@ -46,6 +46,30 @@
 
 }
 
+.searchbar-results{
+    margin-top: .5rem;
+    position: absolute;
+    bottom: 1;
+    background: var(--color-lightGray);
+    /*border-radius: 10px;*/
+    width:100%;
+    
+}
+
+.searchbar-result {
+    padding: .5rem;
+}
+
+.searchbar-result:hover {
+    filter: grayscale(100%) opacity(0.5) ;
+}
+
+.searchbar-result *{
+    
+    word-break: break-all;
+}
+
+
 .sort-button-icon {
     width: .7rem;
     color: #888888;

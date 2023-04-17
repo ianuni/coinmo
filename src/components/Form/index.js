@@ -1,15 +1,21 @@
 import React from 'react'
 import "./Form.css"
 import Button from '../Button'
-const Form = ({children, onSubmit, title}) => {
+const Form = ({children, onSubmit, errorMessage}) => {
+  
+
   return (
     <form className="form-component" onSubmit={onSubmit}>
-        <h1 className="form-title-text">{title}</h1>
-        <div className="form-title-underscore"></div>
+        { errorMessage &&
+        <div className="form-error">
+          <span>{errorMessage}</span>
+        </div>
+        }
         {children}
     </form>
   )
 }
+
 
 export const TextInput = ({label, name, placeholder, onBlur, onChange, error}) => {
   return (

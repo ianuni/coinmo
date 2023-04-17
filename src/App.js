@@ -11,6 +11,7 @@ import Statistics from "./pages/Statistics";
 import Profile from "./pages/Profile";
 import CreateInvoice from "./pages/CreateInvoice";
 import InvoiceList from "./pages/InvoiceList";
+import ContactsPage from "./pages/ContactsPage";
 
 function App() {
   return(
@@ -24,6 +25,9 @@ function App() {
         <Route path="invoices" element={<InvoicePage/>}>
           <Route index="list" element={<InvoiceList/>}/>
           <Route path="create" element={<CreateInvoice/>}/>
+        </Route>
+        <Route path="contacts" element={<ContactsPage/>}>
+          
         </Route>
         <Route path="inbox" element={<Inbox/>}/>
         <Route path="statistics" element={<Statistics/>}/>

@@ -1,15 +1,4 @@
 
-.sign-up-container {
-    width: 100%;
-    padding: 3rem 0;
-    min-height: 100vh;
-    background: linear-gradient(112.69deg, #0C8CE9 -1.31%, #6310A4 100.69%);
-    background-position: center;
-    background-size: cover;
-    overflow: hidden;
-    position: relative;
-}
-
 .sign-up-toggle {
     margin-top: .25rem;
     text-align: center;
@@ -20,3 +9,4 @@
     text-decoration: 0;
     cursor: pointer;
 }
+

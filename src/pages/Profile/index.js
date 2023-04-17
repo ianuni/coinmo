@@ -1,10 +1,17 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useAuth } from '../../context/AuthContext'
 
 function Profile() {
   const {logOut, currentUserData, loading} = useAuth()
 
-  console.log(currentUserData)
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      /*behavior: "smooth"*/
+    });
+  }, []);
+
   return (
     <>
     <button onClick={logOut}>Sign out</button>
@@ -12,6 +19,7 @@ function Profile() {
       <>
       <h1>{currentUserData.name}</h1> 
       <span>{currentUserData.category}</span>
+      <h1>{currentUserData.address}</h1>
       </>
      : loading}
     </>

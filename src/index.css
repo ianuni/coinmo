@@ -3,4 +3,9 @@
     font-family: 'Open Sans', sans-serif;
     padding: 0;
     margin: 0;
+    --color-primary: #0C8CE9;
+    --color-contrast: #E9590C;
+    --color-darkGray: #888888;
+    --color-lightGray: #D9D9D9;
+    --color-fade: linear-gradient(112.69deg, #0C8CE9 -1.31%, #6310A4 100.69%);
 }

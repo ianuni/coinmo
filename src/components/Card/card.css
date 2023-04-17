@@ -1,17 +1,51 @@
 .card-card {
-    max-width: 30rem;
     min-width: 10rem;
-    
     padding: 2rem;
-    margin: 0 auto;
-    
     background: white;
     border-radius: 20px;
     
 }
 
+.card-container {
+  width: 100%;
+  min-height: 100vh;
+  /*background: var(--color-fade);*/
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-title-text {
+  margin: 0;
+  margin-bottom: .25rem;
+  font-size: 1.5rem;
+}
+
+.card-title-underscore {
+  margin-bottom: 1rem;
+  height: 5px;
+  width: 3rem;
+  border-radius: 10px;
+  background: linear-gradient(112.69deg, #0C8CE9 -1.31%, #6310A4 100.69%);
+}
+
 @media screen and (max-width: 600px) {
     .card-card {
-      max-width: 100%;
+      margin: 3rem 0;
+      max-width: 100% !important;
+      max-height: 100% !important;
+    }
+  }
+
+@media screen and (min-width: 600px) {
+    .card-card {
+      width: 100%;
+    }
+
+    .card-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
